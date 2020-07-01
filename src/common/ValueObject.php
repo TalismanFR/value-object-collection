@@ -21,4 +21,9 @@ abstract class ValueObject implements \services\valueobjects\common\contracts\Va
 
         return $this == $other;
     }
+
+    public function jsonSerialize()
+    {
+        return $this->__toString();
+    }
 }
