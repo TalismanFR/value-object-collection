@@ -6,7 +6,7 @@ namespace services\valueobjects\SNILS;
 
 use services\valueobjects\common\ValueObject;
 
-class Snils extends ValueObject
+class Snils extends ValueObject implements \services\valueobjects\SNILS\contract\Snils
 {
     private string $snils;
 
@@ -45,11 +45,7 @@ class Snils extends ValueObject
             }
         }
         //проверка контрольной суммы
-        if ($check_digit === (int)substr($snils, -2)) {
-            return true;
-        }
-
-        return false;
+        return $check_digit === (int)substr($snils, -2);
     }
 
     /**
