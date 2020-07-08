@@ -11,6 +11,7 @@ PHP ValueObjects Collection
  - OGRN `services\valueobjects\OGRN\Ogrn` ОГРН.
  - OGRNIP `services\valueobjects\OGRNIP\Ogrnip` ОГРНИП.
  - PhoneNumber `services\valueobjects\Phone\PhoneNumber`. Номер телефона с обязательным `+` в начале.
+ - Email `services\valueobjects\Email\Email`. Email.
  
  Все классы имеют метод `equaltTo` для сравнения двух объектов.
  Так же реализуется интерфес `JsonSerializable` и магический метод `__toString`.
