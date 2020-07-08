@@ -6,7 +6,7 @@ namespace services\valueobjects\OGRNIP;
 
 use services\valueobjects\common\ValueObject;
 
-class Ogrnip extends ValueObject
+class Ogrnip extends ValueObject implements \services\valueobjects\OGRNIP\contract\Ogrnip
 {
     private string $ogrnip;
 

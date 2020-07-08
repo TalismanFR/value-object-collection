@@ -8,7 +8,7 @@ use libphonenumber\NumberParseException;
 use libphonenumber\PhoneNumberUtil;
 use services\valueobjects\common\ValueObject;
 
-class PhoneNumber extends ValueObject
+class PhoneNumber extends ValueObject implements \services\valueobjects\Phone\contract\PhoneNumber
 {
     private string $phone;
 
@@ -29,7 +29,7 @@ class PhoneNumber extends ValueObject
         try {
             $number = PhoneNumberUtil::getInstance()->parse($phoneNumber);
             if (!PhoneNumberUtil::getInstance()->isPossibleNumber($number)) {
-                throw new NumberParseException(NumberParseException::NOT_A_NUMBER,'Error format phone ' . $phoneNumber);
+                throw new NumberParseException(NumberParseException::NOT_A_NUMBER, 'Error format phone ' . $phoneNumber);
             }
         } catch (NumberParseException $e) {
             return false;
