@@ -46,12 +46,12 @@ class Ogrn extends ValueObject implements \services\valueobjects\OGRN\contract\O
     }
 
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getOgrn();
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return $this->__toString();
     }

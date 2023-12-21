@@ -57,12 +57,12 @@ class Snils extends ValueObject implements \services\valueobjects\SNILS\contract
     }
 
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getSnils();
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return $this->__toString();
     }

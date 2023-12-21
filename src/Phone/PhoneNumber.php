@@ -48,7 +48,7 @@ class PhoneNumber extends ValueObject implements \services\valueobjects\Phone\co
     }
 
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getPhoneNumber();
     }

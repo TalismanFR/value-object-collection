@@ -80,12 +80,12 @@ class Email extends ValueObject implements \services\valueobjects\Email\contract
      * {@inheritdoc}
      *
      */
-    public function __toString()
+    public function __toString(): string
     {
         return sprintf('%s@%s', $this->mailBox, $this->host);
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return $this->__toString();
     }

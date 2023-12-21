@@ -86,12 +86,12 @@ class Inn extends ValueObject implements \services\valueobjects\INN\contract\Inn
     }
 
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getInn();
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return $this->__toString();
     }

@@ -41,12 +41,12 @@ class Ogrnip extends ValueObject implements \services\valueobjects\OGRNIP\contra
         return $this->ogrnip;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->getOgrnip();
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return $this->__toString();
     }
